@@ -47,6 +47,7 @@ class JointTrajectoryAction:
 	def execute_cb(self, goal):
 		is_timed_out = False
 		start = rospy.Time.now()
+
 		duration = goal.trajectory.points[(len(goal.trajectory.points) - 1)].time_from_start + rospy.Duration(30.0)
 		
 		for i in range(len(goal.trajectory.points)):
