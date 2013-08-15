@@ -33,7 +33,8 @@ class JointTrajectoryAction:
 		
 		self.pub = rospy.Publisher("position_command", brics_actuator.msg.JointPositions)
 		
-		self.action = actionlib.SimpleActionServer("joint_trajectory_action", control_msgs.msg.FollowJointTrajectoryAction, execute_cb = self.execute_cb)
+		self.action = actionlib.SimpleActionServer("joint_trajectory_action", control_msgs.msg.FollowJointTrajectoryAction, execute_cb = self.execute_cb, auto_start=False)
+		self.action.start()
 	
 	
 	def joint_states_callback(self, msg):
