@@ -16,7 +16,7 @@
   <depend package="kdl_parser"/>
   <depend package="urdf"/>
   <depend package="sensor_msgs"/>
-  <depend package="kinematics_msgs" />
+  <depend package="kinematics_msgs"/>
   <depend package="trajectory_msgs"/>
   <depend package="arm_navigation_msgs"/>
   <depend package="pr2_controllers_msgs"/>
@@ -27,7 +27,7 @@
   
   <export>
     <cpp cflags="-I${prefix}/include" lflags="-Wl,-rpath,${prefix}/lib -L${prefix}/lib -lyoubot_arm_kinematics"/>
-    <kinematics_base plugin="${prefix}/kinematics_plugins.xml" />
+    <kinematics_base plugin="${prefix}/kinematics_plugins.xml"/>
   </export>
 
 </package>
